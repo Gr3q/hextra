@@ -1004,9 +1004,8 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 247 237 / var(--tw-bg-opacity));
 }
-.hx-bg-primary-100 {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + calc(calc(100% - var(--primary-lightness)) / 50) * 44) / var(--tw-bg-opacity));
+.hx-bg-primary-100\/sidebar-bg-selected {
+  background-color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + calc(calc(100% - var(--primary-lightness)) / 50) * 44) / var(--sidebar-bg-selected-opacity));
 }
 .hx-bg-primary-400 {
   --tw-bg-opacity: 1;
@@ -2624,6 +2623,7 @@ body:is(html[class~="dark"] *) {
   --primary-lightness: 50%;
   --navbar-height: 4rem;
   --menu-height: 3.75rem;
+  --sidebar-bg-selected-opacity: 0.1;
 }
 .dark {
   --primary-hue: 204deg;
@@ -2991,8 +2991,8 @@ body:is(html[class~="dark"] *) {
 .dark\:hx-bg-primary-300\/10:is(html[class~="dark"] *) {
   background-color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + calc(calc(100% - var(--primary-lightness)) / 50) * 27) / 0.1);
 }
-.dark\:hx-bg-primary-400\/10:is(html[class~="dark"] *) {
-  background-color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + calc(calc(100% - var(--primary-lightness)) / 50) * 16) / 0.1);
+.dark\:hx-bg-primary-400\/sidebar-bg-selected:is(html[class~="dark"] *) {
+  background-color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + calc(calc(100% - var(--primary-lightness)) / 50) * 16) / var(--sidebar-bg-selected-opacity));
 }
 .dark\:hx-bg-primary-600:is(html[class~="dark"] *) {
   --tw-bg-opacity: 1;
