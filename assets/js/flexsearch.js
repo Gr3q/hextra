@@ -222,18 +222,17 @@ document.addEventListener("DOMContentLoaded", function () {
     for (const route in data) {
       let pageContent = '';
       ++pageId;
-
       const urlParts = route.split('/').filter(x => x != "" && !x.startsWith('#'));
+
       let crumb = '';
       let searchUrl = '/'
-
       for (let i = 0; i < urlParts.length; i++) {
         const urlPart = urlParts[i];
         searchUrl += urlPart + '/'
 
         const crumbData = data[searchUrl];
         if (!crumbData) {
-          console.warn('No data for', searchUrl, ', will produce incomplete section title in search results.');
+          console.warn('Excluded page', searchUrl, '- will not be included for search result breadcrumb for', route);
           continue;
         }
 
