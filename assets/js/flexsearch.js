@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       for (const heading in data[route].data) {
         const [hash, text] = heading.split('#');
-        const url = route.trimEnd('/') + (hash ? '#' + hash : '')
+        const url = route.trimEnd('/') + (hash ? '#' + hash : '');
         const title = text || data[route].title;
 
         const content = data[route].data[heading] || '';

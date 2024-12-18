@@ -83,9 +83,6 @@ module.exports = {
     extend: {
       colors: {
         dark: '#111'
-      },
-      opacity: {
-        "sidebar-bg-selected": "var(--sidebar-bg-selected-opacity)"
       }
     }
   },
