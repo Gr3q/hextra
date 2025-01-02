@@ -56,7 +56,6 @@ The theme can be further customized by overriding the default styles via the exp
 .hextra-footer:is(html[class~="dark"] *) {
   /* Styles will be applied to the footer element in dark mode */
 }
-
 ```
 
 The following classes can be used to customize various parts of the theme.
@@ -74,7 +73,7 @@ The following classes can be used to customize various parts of the theme.
 
 ##### Card
 
-- `hextra-card` - The badge element
+- `hextra-card` - The card element
 - `hextra-card-image` - The card image element
 - `hextra-card-icon` - The card icon element
 - `hextra-card-subtitle` - The card subtitle element
@@ -82,6 +81,33 @@ The following classes can be used to customize various parts of the theme.
 ##### Cards
 
 - `hextra-cards` - The cards grid container
+
+##### Jupyter Notebook
+
+- `hextra-jupyter-code-cell` - The Jupyter code cell container
+- `hextra-jupyter-code-cell-outputs-container` - The Jupyter code cell outputs container
+- `hextra-jupyter-code-cell-outputs` - The Jupyter code cell output div element
+
+##### PDF
+
+- `hextra-pdf` - The PDF container element
+
+##### Steps
+
+- `steps` - The steps container
+
+##### Tabs
+
+- `hextra-tabs-panel` - The tabs panel container
+- `hextra-tabs-toggle` - The tabs toggle button
+
+##### Filetree
+
+- `hextra-filetree` - The filetree container
+
+##### Folder
+
+- `hextra-filetree-folder` - The filetree folder container
 
 #### Navbar
 
@@ -92,6 +118,7 @@ The following classes can be used to customize various parts of the theme.
 #### Footer
 
 - `hextra-footer` - The footer element
+- `hextra-custom-footer` - The custom footer section container
 
 #### Search
 
@@ -123,6 +150,18 @@ The following classes can be used to customize various parts of the theme.
 - `hextra-code-copy-btn-container` - The code copy button container
 - `hextra-code-copy-btn` - The code copy button
 
+#### Code Block
+
+- `hextra-code-block` - The code block container
+
+#### Feature Card
+
+- `hextra-feature-card` - The feature card link element
+
+#### Feature Grid
+
+- `hextra-feature-grid` - The feature grid container
+
 #### Breadcrumbs
 
 No specific class is available for breadcrumbs.
@@ -145,28 +184,28 @@ You may add custom scripts to the end of the head for every page by adding the f
 layouts/partials/custom/head-end.html
 ```
 
-## Custom Footer Section
+## Custom Extra Section in Footer
 
-You can add a custom section the footer between the language/theme buttons and the Copyright/Powered By section by creating a file `layouts/partials/custom/footer.html` in your site.
+You can add extra section in the footer by creating a file `layouts/partials/custom/footer.html` in your site.
 
 ```html {filename="layouts/partials/custom/footer.html"}
 <!-- Your footer element here -->
 ```
 
-Available variables in the footer section are:
+The added section will be added before the copyright section in the footer.
+You can use [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and [Hugo template syntax](https://gohugo.io/templates/) to add your own content.
 
-- `.aboveVisible`: `true` if the Language or Theme button(s) are visible above the footer along with a horizontal separator.
-- `.belowVisible`: `true` if the Copyright or PoweredBy text are visible below the footer.
-
-_Note: The custom footer inherits the default footer background color text color and the `width` setting in `hugo.yaml#footer` section._
+Hugo variables available in the footer section are: `.switchesVisible` and `.copyrightVisible`.
 
 ## Custom Layouts
 
 The layouts of the theme can be overridden by creating a file with the same name in the `layouts` directory of your site.
 For example, to override the `single.html` layout for docs, create a file `layouts/docs/single.html` in your site.
 
-For further information, refer to the [Hugo Templates](https://gohugo.io/templates/).
+For further information, refer to the [Hugo Templates][hugo-template-docs].
 
 ## Further Customization
 
 Didn't find what you were looking for? Feel free to [open a discussion](https://github.com/imfing/hextra/discussions) or make a contribution to the theme!
+
+[hugo-template-docs]: https://gohugo.io/templates/
